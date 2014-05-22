@@ -1,0 +1,33 @@
+<html ng-app="myApp">
+<head>
+  <meta charset="utf8">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <title></title>
+</head>
+<body ng-controller="CcdAuthController">
+  <div class="container">
+    <div id="session" class="pull-right">
+      <span ng-show="user">
+        {{user.email}} | <a ng-click="logout()">Logout</a>
+      </span>
+      <span ng-hide="user"><a ng-click="login()">Login</a></span>
+    </div>
+  </div>
+
+  <div class="container">
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+  <script src='https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
+  <script src="scripts/my_app.js"></script>
+  <script src="scripts/controllers/ccd_auth_controller.js"></script>
+  <!-- <script src="scripts/controllers/my_first_controller.js"></script> -->
+</body>
+</html>
