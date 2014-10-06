@@ -1,0 +1,23 @@
+{
+  "name": "clarks-angular-firebase-skeleton",
+  "version": "0.0.1",
+  "homepage": "https://github.com/clarkcutlerdev/clarks-angular-firebase-skeleton",
+  "description": "Starting point for throwing together an angular+firebase app",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "firebase"
+  ],
+  "authors": [
+    "Clark Cutler"
+  ],
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0",
+    "lodash": "~2.4.1",
+    "angular": "~1.2.26",
+    "angularfire": "~0.8.2",
+    "firebase": "~1.1.0"
+  }
+}
