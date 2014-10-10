@@ -43,12 +43,14 @@ end
   'myRefSubdomain' => myRefSubdomain,
   'myRef' => myRef,
   'MyMainController' => MyMainController,
-  'myRefSubdomain_controller' => underscore(MyMainController),
+  'my_main_controller' => underscore(MyMainController),
   'myTitle' => myTitle,
 }.each do |proto_name, new_name|
-  shell "#{sed_i} 's/#{proto_name}/#{new_name}/g' index.html scripts/*.js scripts/**/*.js"
+  shell "#{sed_i} 's/#{proto_name}/#{new_name}/g' index.html coffee/*.coffee coffee/**/*.coffee scripts/*.js scripts/**/*.js"
 end
 
+FileUtils.mv 'coffee/my_app.coffee', "coffee/#{underscore(myApp)}.coffee"
+FileUtils.mv 'coffee/controllers/my_main_controller.coffee', "coffee/controllers/#{underscore(MyMainController)}.coffee"
 FileUtils.mv 'scripts/my_app.js', "scripts/#{underscore(myApp)}.js"
 FileUtils.mv 'scripts/controllers/my_main_controller.js', "scripts/controllers/#{underscore(MyMainController)}.js"
 
